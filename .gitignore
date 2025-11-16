@@ -1,0 +1,37 @@
+# Zig build artifacts
+zig-out/
+zig-cache/
+.zig-cache/
+
+# Build directories
+build/
+dist/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.o
+
+# Test artifacts
+test-results/
+coverage/
+test*.maml
+
+# Local configuration
+.env
+*.local
+
+# Dependencies
+deps/
+vendor/

@@ -1,0 +1,111 @@
+# Example MAML Configuration File
+# This demonstrates all the features of the MAML format
+
+{
+  # Project metadata
+  name: "maml-zig"
+  description: "A MAML parser implementation in Zig"
+  version: 1
+  license: "MIT"
+
+  # Boolean values
+  active: true
+  deprecated: false
+
+  # Numeric values
+  max_connections: 100
+  timeout: 30.5
+  rate_limit: 1e3
+  precision: 1.5e-10
+
+  # Arrays with different styles
+  tags: ["parser", "config", "minimal"]
+
+  colors: [
+    "red"
+    "green"
+    "blue"
+  ]
+
+  # Nested objects
+  server: {
+    host: "localhost"
+    port: 8080
+    ssl: true
+  }
+
+  database: {
+    driver: "postgresql"
+    host: "db.example.com"
+    port: 5432
+    credentials: {
+      username: "admin"
+      password: "secret123"
+    }
+  }
+
+  # String with escape sequences
+  message: "Hello, World!\nThis has a newline and a tab:\t<tab>"
+  unicode: "Emoji support: 🚀 \u{1F680}"
+
+  # Raw string (multiline, no escaping)
+  readme: """
+This is a raw string.
+It preserves all formatting exactly as written.
+No need to escape \n or \t or "quotes".
+Perfect for code snippets or documentation!
+"""
+
+  code_example: """
+    function hello() {
+      console.log("No escaping needed!");
+      return true;
+    }
+  """
+
+  # Arrays with mixed types
+  mixed: [
+    "string"
+    42
+    3.14
+    true
+    null
+    { nested: "object" }
+  ]
+
+  # Null value
+  optional_field: null
+
+  # Complex nested structure
+  features: {
+    parsing: {
+      strings: true
+      numbers: true
+      booleans: true
+      "null": true
+      objects: true
+      arrays: true
+    }
+
+    syntax: {
+      comments: true
+      trailing_commas: true
+      raw_strings: true
+      unicode: true
+    }
+  }
+
+  # Array of objects
+  users: [
+    {
+      id: 1
+      name: "Alice"
+      role: "admin"
+    }
+    {
+      id: 2
+      name: "Bob"
+      role: "user"
+    }
+  ]
+}
