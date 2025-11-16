@@ -72,7 +72,7 @@ pub const Parser = struct {
     }
 
     fn parseObject(self: *Parser) ParseError!Value {
-        var map = std.StringHashMap(Value).init(self.allocator);
+        var map = std.StringArrayHashMap(Value).init(self.allocator);
         errdefer {
             var it = map.iterator();
             while (it.next()) |entry| {

@@ -2,7 +2,7 @@ const std = @import("std");
 const Allocator = std.mem.Allocator;
 
 pub const Value = union(enum) {
-    object: std.StringHashMap(Value),
+    object: std.StringArrayHashMap(Value),
     array: std.ArrayList(Value),
     string: []const u8,
     integer: i64,
